@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="milestone" content="Portfolio" />
+    <!-- TODO: Replace this with your title -->
+    <title>Isabella's Portfolio Webpage</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom styles (these can extend the default Bootstrap styles) -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-moon-stars me-2"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"
+            />
+            <path
+              d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"
+            />
+          </svg>
+          <span></span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#mission-section">Mission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills-section">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-section">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section
+      id="hero-section"
+      class="d-flex flex-column align-items-center justify-content-center text-center text-white"
+      style="
+        background: url('https://i.pinimg.com/originals/72/2a/c8/722ac8d7348beb20a0480dffc9c799db.jpg')
+          no-repeat center center/cover;
+        height: 100vh;
+        position: relative;
+      "
+    >
+      <div
+        class="overlay"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+        "
+      ></div>
+
+      <img
+        src="IMG-8088.jpg"
+        class="rounded-circle border border-light"
+        alt="Profile Picture"
+        style="width: 150px; height: 150px; position: relative; z-index: 1"
+      />
+
+      <h1 class="mt-3" style="position: relative; z-index: 1">
+        Isabella Morgan
+      </h1>
+      <p class="lead" style="position: relative; z-index: 1">
+        Passionate Developer | Creative Thinker | Lifelong Learner
+      </p>
+    </section>
+
+    <section id="carousel-section" class="container my-5">
+      <h2 class="text-center mb-4">My Hobbies</h2>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://i.pinimg.com/originals/10/0e/3b/100e3bcc43696c660ce6bbbf88649803.jpg"
+              class="d-block w-50 mx-auto"
+              alt="Slide 1"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Reading</h5>
+              <p>
+                I love to read books! In 2024, I was able to reach my goal of
+                reading 40 books in one year! My favorite book would have to be
+              </p>
+              <a href="TheSecretHistory.pdf" download="TheSecretHistory.pdf"
+                >Click here to download <i>The Secret History</i> PDF</a
+              >
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://whatphone.net/wp-content/uploads/2017/05/Legend-of-Zelda-Header.jpg"
+              class="d-block w-50 mx-auto"
+              alt="Slide 2"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Video Games</h5>
+              <p>
+                I also love to play video games in my spare time with my sister!
+                I have so many favorite video games, but I especially love the
+                Zelda franchise, Animal Crossing, Call of Duty, and Super Smash
+                Bros.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://th.bing.com/th/id/OIP.nEhW3_P7H_h3h8efCviMlQHaEK?rs=1&pid=ImgDetMain"
+              class="d-block w-50 mx-auto"
+              alt="Slide 3"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fixing Laptops and Gaming Consoles</h5>
+              <p>
+                I enjoy fixing things, it makes me feel better about keeping
+                things from ending up in the landfill. Newer electronics are
+                harder to fix, but I still try to fix what I can!
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Mission/Meet-me section -->
+    <section
+      id="mission-section"
+      class="container my-5"
+      style="padding-top: 50px; padding-bottom: 75px"
+    >
+      <h2 class="text-center mb-4">My Mission</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center" id="mission.img">
+          <img
+            src="img/IMG-6961.jpg"
+            class="img-fluid rounded"
+            alt="Mission Image"
+          />
+        </div>
+        <div class="col-md-6">
+          <p>
+            As a student majoring in computer science and cybersecurity, my
+            mission would be to become either a software engineer or a
+            penetration tester. I would love to further my education and get a
+            PhD in computer science and/or cybersecurity.
+            <br />
+          </p>
+          <p>
+            After getting a good job, I would like to set aside enough money to
+            be able to retire my parents and help my grandparents. They have
+            always done so much for me and they deserve rest and relaxation
+            after leading such hardworking lives. Additionally, I would like to
+            spend the rest of my life helping people whether that be through
+            software engineering, cybersecurity, teaching, etc.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills section -->
+    <section
+      id="skills-section"
+      class="container my-5"
+      style="padding-top: 50px; padding-bottom: 75px"
+    >
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="row text-center">
+        <!-- First Row -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <img
+            src="https://cdn0.iconfinder.com/data/icons/social-network-9/50/22-1024.png"
+            alt="HTML"
+            class="skill-icon mb-2"
+          />
+          <p>
+            Creating websites and adding to existing websites by using modern
+            semantic HTML.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <img
+            src="https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png"
+            alt="CSS"
+            class="skill-icon mb-2"
+          />
+          <p>
+            Stylizing web pages using CSS to make them personalized and fun to
+            interact with.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <img
+            src="https://th.bing.com/th/id/R.76984d489016bb78c8c347e661bb8e94?rik=v6h54jhMOjGWxg&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f62a76492bd73a4af5c5d4fb9.png&ehk=CCD7CF%2fzwR7i%2bBDVkut8Jbuzx%2bibavojdYkrIJG2PIc%3d&risl=&pid=ImgRaw&r=0"
+            alt="Bootstrap"
+            class="skill-icon mb-2"
+          />
+          <p>
+            Utilizing Bootstrap to quickly develop websites using the web's most
+            popular framework.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/027/127/463/original/javascript-logo-javascript-icon-transparent-free-png.png"
+            alt="JavaScript"
+            class="skill-icon mb-2"
+          />
+          <p>
+            Making interactive experiences, games, web apps, and more using
+            Javascript.
+          </p>
+        </div>
+        <!-- Second Row -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <img
+            src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3256978/file-type-python-icon-md.png"
+            alt="Python"
+            class="skill-icon mb-2"
+          />
+          <p>
+            Wrote high-level code using Python to make object-oriented
+            algorithms for data analysis, automation, and application
+            development.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <img
+            src="https://www.freeiconspng.com/uploads/c--logo-icon-0.png"
+            alt="C++ Programming"
+            class="skill-icon mb-2"
+          />
+          <p>
+            Experienced in developing high-performance applications with C++,
+            including data structures, algorithms, and object-oriented
+            programming.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <img
+            src="https://educe-ubc.github.io/images/rstudio_logo.png"
+            alt="R"
+            class="skill-icon mb-2"
+          />
+          <p>
+            Knowledgeable in statistical computing and data visualization using
+            R for analysis, modeling, and reporting.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"
+            alt="SQL"
+            class="skill-icon mb-2"
+          />
+          <p>
+            Adept at writing optimized SQL queries for data retrieval,
+            manipulation, and database management.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact-section"
+      class="container my-5"
+      style="padding-top: 75x; padding-bottom: 75px"
+    >
+      <h2 class="text-center mb-4">Contact Me!</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-3 contact-icons">
+          <a href="https://github.com/777isabella" target="_blank">
+            <i class="bi bi-github fs-1 icon-github"></i
+          ></a>
+        </div>
+        <div class="col-md-4 mb-3 contact-icons">
+          <a
+            href="https://www.linkedin.com/in/isabella-morgan-684434347?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmaHYJqiJQ12cWu9mz30tjw%3D%3D"
+            target="_blank"
+          >
+            <i class="bi bi-linkedin fs-1 icon-linkedin"></i
+          ></a>
+        </div>
+        <div class="col-md-4 mb-3 contact-icons">
+          <a href="mailto:isabellataylormorgan@gmail.com" target="_blank">
+            <i class="bi bi-envelope fs-1 icon-email"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <section id="footer-section">
+      <footer class="text-dark text-center py-3">&copy; Isabella 2025</footer>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76A+Pnhk5Tf+mL20bBOsiRLfyAeet9Wl/Jp3yD5zVgxKk5EVOtOJ3C6tUkk5zMG"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
