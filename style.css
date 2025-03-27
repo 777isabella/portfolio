@@ -1,0 +1,241 @@
+/* You can add custom CSS and extend Boostrap styles in this file. Remember, Bootstrap is just CSS at the end of the day! */
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif; /* Use a modern Bootstrap-like font */
+  margin: 0;
+  padding: 0;
+  background-color: #331d2c;
+  color: #ffd0ec;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #ffd0ec;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--bs-warning) !important; /* Bootstrap's warning color */
+}
+
+/* Hero Section */
+#hero-section {
+  position: relative;
+  height: 100vh;
+  background: url("your-background-image.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--bs-light); /* Bootstrap Light color */
+}
+
+#hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 29, 44, 0.7) !important;
+  /* background: rgba(0, 0, 0, 0.5); Dark overlay for readability */
+}
+
+#hero-section img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #331d2c;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+#hero-section img:hover {
+  transform: scale(1.1); /* Slight hover effect */
+}
+
+#hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  /* background: rgba(204, 157, 210, 0.37);
+  padding: 20px;
+  border-radius: 10px; */
+}
+
+#hero-section p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #hero-section h1 {
+    font-size: 2rem;
+  }
+
+  #hero-section p {
+    font-size: 1rem;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: #ffd0ec;
+  color: var(--bs-light); /* Bootstrap Light */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1rem;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: var(--bs-primary); /* Bootstrap Primary */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+}
+
+#contact-section i {
+  transition: color 0.3s ease-in-out;
+}
+
+#contact-section i:hover {
+  color: #ff69b4; /* A pinkish color on hover */
+  transform: scale(1.2); /* Slight zoom effect */
+  transition: 0.3s;
+}
+
+.icon-github {
+  color: #ffd0ec;
+}
+
+.icon-linkedin {
+  color: #ffd0ec;
+}
+
+.icon-email {
+  color: #ffd0ec;
+}
+
+.skill-icon {
+  width: 100px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  object-fit: contain; /* Ensures icons don't get distorted */
+}
+
+.mission-img {
+  border-radius: 40px; /* Adjust this value for more or less rounding */
+  overflow: hidden; /* Ensures content inside respects the border-radius */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  /* width: 100%; 
+  max-width: 400px;
+  height: auto; 
+  display: block;
+  margin: 0 auto; */
+}
+
+.skills-section p {
+  margin-bottom: 20px !important; /* Adds space below each paragraph */
+  line-height: 1.6; /* Increases line spacing for better readability */
+  max-width: 800px; /* Keeps paragraphs at a readable width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-section {
+  padding: 40px 20px; /* Adds space around the content */
+}
+
+.skills-section .skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px; /* Adds space between each skill */
+}
+
+p {
+  text-indent: 50px;
+}
+
+/* Ensure the carousel only shows one item at a time
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  height: 500px; /* Or whatever height you want for the carousel */
+
+/* .carousel-item {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center the images */
+/* align-items: center;
+} */
+
+/* .carousel-item img {
+  width: 100%; /* Ensure the image takes the full width */
+/* height: auto;
+} */
+
+/* .carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon { */
+/* background-color: black; /* Make sure the controls are visible */
+
+/* Carousel Styling */
+.carousel {
+  height: 50vh; /* 50% of the viewport height */
+}
+
+.carousel-inner {
+  height: 100%; /* Ensure the inner carousel uses the full height of the carousel container */
+}
+
+.carousel-item {
+  position: relative; /* Ensure the captions are positioned correctly inside the item */
+}
+
+.carousel-item img {
+  max-width: 100%; /* Make sure images don't stretch beyond their container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images cover the space without stretching */
+}
+
+.carousel-caption {
+  position: absolute; /* Position the caption over the image */
+  bottom: 20px; /* Add space from the bottom */
+  left: 50%; /* Center the caption horizontally */
+  transform: translateX(-50%); /* Center the caption perfectly */
+  color: #ffffff; /* White text for visibility */
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background for readability */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem; /* Adjust caption font size */
+}
