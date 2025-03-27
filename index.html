@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script>
+        async function submitName(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            if (name.trim() === "") return alert("Please enter your name.");
+
+            const response = await fetch("/save-name", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name })
+            });
+
+            if (response.ok) {
+                window.location.href = "/portfolio.html"; // Redirect to your portfolio
+            } else {
+                alert("Error saving name.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="submitName(event)">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" required>
+        <button type="submit">Enter</button>
+    </form>
+</body>
+</html>
